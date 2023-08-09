@@ -11,11 +11,9 @@ var frm5 = document.getElementById('btni');
 var olv = document.getElementById('olv');
 var icon = document.getElementById('icono');
 var icon2 = document.getElementById('icono2');
-var texto1 = document.getElementById('texto1')
 
 toggle.onclick = function(){
     toggle.classList.toggle('active');
-    texto1.classList.toggle('active')
     body.classList.toggle('active');
     boton.classList.toggle('active');
     formulario1.classList.toggle('active');
