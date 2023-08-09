@@ -1,0 +1,425 @@
+body{
+    background-color: #000000;
+    transition: background 0.5s;
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+/* propiedades del menu responsivo */
+
+header{
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 50px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.menu nav ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    transition: opacity 300ms;
+}
+
+.menu nav ul li a:hover{
+    opacity: 0.6;
+}
+
+.btn__header-register,
+.btn__register-cover{
+    padding: 14px 50px;
+    border: none;
+    background: #ffffff;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+}
+
+
+.btn__header-register:hover,
+.btn__register-cover:hover{
+    background: #69F1A1;
+    color: #ffffff;
+}
+
+#icon_menu{
+    display: none;
+}
+
+/* menu */
+
+@media (max-width: 1024px){
+
+    .container__header,
+    main{
+        padding: 20px;
+    }
+
+    #icon_menu{
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header__register{
+        display: none;
+    }
+
+    .menu{
+        height: 0%;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+    }
+
+    .menu nav ul{
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    .menu nav ul li{
+        padding: 10px 40px;
+    }
+
+    .mostrar_menu{ /*CLASE MANIPULADA POR JS*/
+        height: 335px;
+    }
+
+    .text__information-cover h1{
+        font-size: 40px;
+    }
+
+    .text__information-cover p{
+        font-size: 16px;
+    }
+
+    .banner__text h2{
+        font-size: 22px;
+    }
+
+    #icon_heart{
+        left: -60px;
+    }
+
+    .banner__icon-fire{
+        right: -20px;
+    }
+}
+
+@media (max-width: 920px){
+    .text__information-cover{
+        width: 100%;
+    }
+
+    .media__cover{
+        display: none;
+    }
+
+    .banner{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    #icon_fire{
+        display: none;
+    }
+
+    #icon_heart{
+        left: 0;
+    }
+
+    .banner__text{
+        width: 100%;
+        margin-top: -100px;
+    }
+}
+
+/* Posible texto escrito */
+
+.titulocontacto{
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #33333333;
+    font-size: 13px;
+  }
+
+
+
+/* Propiedades del Dark & Light */
+
+#contenedor{
+    background-color: rgb(158, 158, 158);
+    position: fixed;
+    left: 1%;
+    bottom: 2%;
+    width: 70px;
+    height: 30px;
+    box-shadow: inset 4px 4px 6px #6e6e6e,
+                inset -4px -4px 6px rgba(0, 0, 0, 0.667);
+    margin-top: 350px;
+    margin: 0px auto;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: scale(.7);
+    background-image: url(../assets/images/luna2.png);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #c4c4c4;
+    transition: 0.5s;
+}
+
+
+#contenedor.active .toggle{
+    left: 40px;
+}
+
+body.active{
+    background-color: white;
+}
+
+#titulo.active{
+    color: black;
+}
+
+.toggle.active{
+    background-image: url(../assets/images/sol.png);
+    background-size: 30px 30px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #c4c4c4;
+}
+
+/* formulario */
+
+
+::selection{
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 37px auto;
+  }
+  .wrapper{
+    width: 100%;
+    background: #ebebeb;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+  }
+  .wrapper .title{
+    height: 90px;
+    background: #ffffff;
+    border-radius: 5px 5px 0 0;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper form{
+    padding: 30px 25px 25px 25px;
+  }
+  .wrapper form .row{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .wrapper form .row input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  form .row input:focus{
+    border-color: #000000;
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+  }
+  form .row input::placeholder{
+    color: #999;
+  }
+  .wrapper form .row i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    background: #000000;
+    border: 1px solid #474747;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper form .pass{
+    margin: -8px 0 20px 0;
+  }
+  .wrapper form .pass a{
+    color: #000000;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  .wrapper form .pass a:hover{
+    text-decoration: underline;
+  }
+  .wrapper form .button input{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    background: #000000;
+    border: 1px solid #3a3a3a;
+    cursor: pointer;
+  }
+  form .button input:hover{
+    background: #424242;
+  }
+  .wrapper form .signup-link{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+  }
+  .wrapper form .signup-link a{
+    color: #3d3d3d;
+    text-decoration: none;
+  }
+  form .signup-link a:hover{
+    text-decoration: underline;
+  }
+
+
+  /* formulario en modo claro */
+
+.wrapper.active{
+    background-color: #303030;
+}
+
+.wrapper .title.active{
+    background-color: #000000;
+    color: white;
+}
+
+.signup-link.active{
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+.signup-link .link-r.active{
+    color: rgb(201, 201, 201);
+}
+
+.wrapper form .button input.active{
+    background-color: white;
+    color: black;
+}
+
+.pass .link-o.active{
+    color: white;
+}
+
+.row .fa-user.active{
+    background-color: white;
+    color: #000000;
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    font-size: 18px;
+    border: 1px solid #474747;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row .fa-lock.active{
+    background-color: white;
+    color: #000000;
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    font-size: 18px;
+    border: 1px solid #474747;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row .fa-person.active{
+    background-color: white;
+    color: #000000;
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    font-size: 18px;
+    border: 1px solid #474747;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row .fa-pencil.active{
+    background-color: white;
+    color: #000000;
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    font-size: 18px;
+    border: 1px solid #474747;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
