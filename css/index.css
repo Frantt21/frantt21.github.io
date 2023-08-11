@@ -171,6 +171,11 @@ header{
     video{
         width: 100%;
     }
+
+    .titulo1{
+        width: 100%;
+        font-size: 10px;
+    }
 }
 
 
@@ -283,11 +288,28 @@ body.active{
     transition: 0.5s;
 }
 
+.contenedor-banner2{
+    background: url(../assets/images/banner3.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
 .contenedor-banner.active{
     background-image: url(../assets/images/banner2.png);
 }
 
+.contenedor-banner2.active{
+    background-image: url(../assets/images/banner4.png);
+}
+
 .banner{
+    padding: 24%;
+}
+
+.banner2{
     padding: 24%;
 }
 

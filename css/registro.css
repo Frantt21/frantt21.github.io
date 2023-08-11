@@ -1,6 +1,7 @@
 body{
     background-color: #000000;
     transition: background 0.5s;
+
 }
 
 *{
@@ -8,6 +9,8 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
+    scrollbar-color: red;
+    scrollbar-width: thin;
 }
 
 /* propiedades del menu responsivo */
@@ -221,7 +224,7 @@ header{
 }
 
 body.active{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 #titulo.active{
@@ -422,3 +425,5 @@ body.active{
     align-items: center;
     justify-content: center;
 }
+
+/* overflow */
