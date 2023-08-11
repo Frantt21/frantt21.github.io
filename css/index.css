@@ -235,10 +235,11 @@ body.active{
 
 /* titulo grande */
 .titulog{
+    display: contents;
     align-items: center;
+    text-align: center;
     width: 40%;
     position: relative;
-    left: 30%;
 }
 
 .titulo1{
